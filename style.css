@@ -1,160 +1,67 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fundo claro e cores vibrantes */
 body {
-    background-color: #f5f9ff; /* azul bem clarinho */
-    color: #1e2a3a;
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    line-height: 1.7;
-    padding: 2.5rem 1.5rem;
+    background: linear-gradient(135deg, #fce4ec, #e8f5e9, #e3f2fd);
+    font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1.5rem;
 }
 
-/* Container principal */
 .container {
-    max-width: 780px;
+    max-width: 700px;
     width: 100%;
-    background: #ffffff;
-    border-radius: 2rem;
-    padding: 2.5rem 2.8rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-/* Títulos centralizados */
-h1, h2 {
     text-align: center;
 }
 
 h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #1e3a5f;
-    margin-bottom: 0.2rem;
+    font-size: 2.5rem;
+    color: #1a237e;
+    margin-bottom: 2rem;
 }
 
-.subtitle {
-    text-align: center;
-    font-size: 1rem;
-    color: #6b7f93;
-    margin-bottom: 2.5rem;
-    border-bottom: 2px solid #eef3f8;
-    padding-bottom: 1.2rem;
+.card {
+    background: #ffffff;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border-left: 6px solid var(--cor);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
 }
 
 h2 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #1e3a5f;
-    margin: 0;
-}
-
-/* Parágrafos */
-p {
-    font-size: 1.05rem;
-    color: #2c3e50;
-    text-align: center;
-    margin: 0.4rem auto 0.6rem;
-    max-width: 85%;
-}
-
-/* Links */
-a {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    color: #2563eb;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease;
-}
-
-a:hover {
-    color: #1d4ed8;
-    border-bottom-color: #2563eb;
-    transform: translateY(-1px);
-}
-
-/* Blocos de cada termo */
-.term-block {
-    background: #fafdff;
-    border-radius: 1.5rem;
-    padding: 1.8rem 1.5rem 1.5rem;
-    margin-bottom: 1.8rem;
-    border: 1px solid #e2ecf5;
-    transition: all 0.3s ease;
-}
-
-.term-block:hover {
-    background: #f0f7ff;
-    border-color: #b6d0e8;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-}
-
-.term-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    font-size: 1.4rem;
+    color: #1e293b;
     margin-bottom: 0.2rem;
 }
 
-/* Badges coloridos */
-.badge {
-    font-size: 0.65rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 0.25rem 1rem;
-    border-radius: 100px;
-    border: 1px solid transparent;
+p {
+    color: #334155;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
 }
 
-.badge.fisica {
-    background: #fef3c7;
-    color: #b45309;
-    border-color: #fcd34d;
+a {
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
 }
 
-.badge.mecanica {
-    background: #d1fae5;
-    color: #065f46;
-    border-color: #6ee7b7;
-}
-
-.badge.eletronica {
-    background: #e0e7ff;
-    color: #3730a3;
-    border-color: #a5b4fc;
-}
-
-.source-wrap {
-    text-align: center;
-    margin-top: 0.6rem;
-}
-
-/* Responsivo */
-@media (max-width: 600px) {
-    .container {
-        padding: 1.5rem 1.2rem;
-    }
-    h1 {
-        font-size: 2.2rem;
-    }
-    p {
-        max-width: 100%;
-    }
-    .term-header {
-        flex-direction: column;
-        gap: 0.2rem;
-    }
+a:hover {
+    border-bottom-color: #1e40af;
 }
