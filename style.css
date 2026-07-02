@@ -1,0 +1,191 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Estilos globais ===== */
+body {
+    /* Fundo sério – azul‑escuro que transmite confiança e sobriedade */
+    background-color: #1e2a3a;
+    /* Texto com excelente contraste (branco suave) */
+    color: #f0f4fa;
+    /* Fonte limpa e sem serifa */
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.7;
+    padding: 2.5rem 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Container central ===== */
+.container {
+    max-width: 780px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(2px);
+    border-radius: 2rem;
+    padding: 2.5rem 2.8rem;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ===== Títulos centralizados ===== */
+h1,
+h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.2rem;
+    background: linear-gradient(135deg, #e0eaff, #94b8ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 1.2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #cbd9f0;
+    margin: 1.8rem 0 0.4rem 0;
+    letter-spacing: -0.01em;
+}
+
+/* ===== Parágrafos e definições ===== */
+p {
+    font-size: 1.05rem;
+    color: #d6e2f0;
+    margin: 0.2rem 0 0.5rem 0;
+    text-align: center;
+    /* alinhamento centralizado para harmonia com os títulos */
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Links (fontes) ===== */
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #7aa9ff;
+    border-bottom: 1.5px solid transparent;
+    transition: all 0.25s ease;
+    margin-top: 0.1rem;
+    letter-spacing: 0.02em;
+}
+
+a:hover {
+    color: #b6d0ff;
+    border-bottom-color: #7aa9ff;
+    transform: translateY(-1px);
+}
+
+/* ===== Cada termo como um bloco ===== */
+.term-block {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1.5rem;
+    padding: 1.8rem 1.5rem 1.5rem;
+    margin-bottom: 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.term-block:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.term-block .term-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.2rem;
+}
+
+.term-block .term-header h2 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.term-block .badge {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.9rem;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.term-block .badge.fisica {
+    background: rgba(251, 146, 60, 0.15);
+    color: #fb923c;
+    border-color: rgba(251, 146, 60, 0.15);
+}
+
+.term-block .badge.mecanica {
+    background: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+    border-color: rgba(52, 211, 153, 0.15);
+}
+
+.term-block .badge.eletronica {
+    background: rgba(167, 139, 250, 0.15);
+    color: #a78bfa;
+    border-color: rgba(167, 139, 250, 0.15);
+}
+
+.term-block .source-wrap {
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+/* ===== Rodapé ===== */
+.footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.04em;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem 1.2rem;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    p {
+        max-width: 100%;
+    }
+    .term-block .term-header {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}
