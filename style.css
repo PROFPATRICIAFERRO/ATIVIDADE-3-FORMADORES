@@ -1,191 +1,136 @@
-/* ===== Reset básico ===== */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== Estilos globais ===== */
+/* Fundo claro e alegre */
 body {
-    /* Fundo sério – azul‑escuro que transmite confiança e sobriedade */
-    background-color: #1e2a3a;
-    /* Texto com excelente contraste (branco suave) */
-    color: #f0f4fa;
-    /* Fonte limpa e sem serifa */
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    line-height: 1.7;
-    padding: 2.5rem 1.5rem;
+    background: linear-gradient(145deg, #f9f3ff, #e8f0fe);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem 1.5rem;
 }
 
-/* ===== Container central ===== */
 .container {
-    max-width: 780px;
+    max-width: 750px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(2px);
-    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(6px);
+    border-radius: 2.5rem;
     padding: 2.5rem 2.8rem;
-    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== Títulos centralizados ===== */
-h1,
-h2 {
-    text-align: center;
-}
-
+/* Títulos centralizados */
 h1 {
+    text-align: center;
     font-size: 2.8rem;
     font-weight: 700;
+    color: #2d1b69;
     letter-spacing: -0.02em;
-    margin-bottom: 0.2rem;
-    background: linear-gradient(135deg, #e0eaff, #94b8ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
-.subtitle {
+.sub {
     text-align: center;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.4);
-    margin-bottom: 2.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding-bottom: 1.2rem;
+    font-size: 1.1rem;
+    color: #5b4a7a;
+    margin-bottom: 2.2rem;
+    border-bottom: 2px dashed #d5c6e6;
+    padding-bottom: 0.8rem;
 }
 
-h2 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #cbd9f0;
-    margin: 1.8rem 0 0.4rem 0;
-    letter-spacing: -0.01em;
-}
-
-/* ===== Parágrafos e definições ===== */
-p {
-    font-size: 1.05rem;
-    color: #d6e2f0;
-    margin: 0.2rem 0 0.5rem 0;
-    text-align: center;
-    /* alinhamento centralizado para harmonia com os títulos */
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ===== Links (fontes) ===== */
-a {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    color: #7aa9ff;
-    border-bottom: 1.5px solid transparent;
-    transition: all 0.25s ease;
-    margin-top: 0.1rem;
-    letter-spacing: 0.02em;
-}
-
-a:hover {
-    color: #b6d0ff;
-    border-bottom-color: #7aa9ff;
-    transform: translateY(-1px);
-}
-
-/* ===== Cada termo como um bloco ===== */
-.term-block {
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 1.5rem;
-    padding: 1.8rem 1.5rem 1.5rem;
+/* Cada card */
+.card {
+    background: #ffffff;
+    border-radius: 1.8rem;
+    padding: 1.8rem 2rem;
     margin-bottom: 1.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    transition: background 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border-left: 8px solid var(--cor, #888);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.term-block:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.08);
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.12);
 }
 
-.term-block .term-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.2rem;
+.card h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #1f1a3a;
+    margin-bottom: 0.1rem;
+    display: inline-block;
+    margin-right: 0.8rem;
 }
 
-.term-block .term-header h2 {
-    margin: 0;
-    font-size: 1.6rem;
-}
-
-.term-block .badge {
-    font-size: 0.6rem;
+.card .tag {
+    display: inline-block;
+    font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    padding: 0.2rem 0.9rem;
+    background: #eee7f7;
+    color: #4a3a6a;
+    padding: 0.15rem 0.9rem;
     border-radius: 100px;
-    background: rgba(255, 255, 255, 0.06);
-    color: rgba(255, 255, 255, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    vertical-align: middle;
 }
 
-.term-block .badge.fisica {
-    background: rgba(251, 146, 60, 0.15);
-    color: #fb923c;
-    border-color: rgba(251, 146, 60, 0.15);
+.card p {
+    font-size: 1.05rem;
+    color: #2d284a;
+    margin: 0.6rem 0 0.8rem 0;
+    line-height: 1.6;
 }
 
-.term-block .badge.mecanica {
-    background: rgba(52, 211, 153, 0.15);
-    color: #34d399;
-    border-color: rgba(52, 211, 153, 0.15);
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    color: #4f3b8a;
+    background: #f0ebff;
+    padding: 0.2rem 1rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
 }
 
-.term-block .badge.eletronica {
-    background: rgba(167, 139, 250, 0.15);
-    color: #a78bfa;
-    border-color: rgba(167, 139, 250, 0.15);
+.card a:hover {
+    background: #d5c6ff;
+    color: #1f0f4a;
 }
 
-.term-block .source-wrap {
-    text-align: center;
-    margin-top: 0.8rem;
-}
-
-/* ===== Rodapé ===== */
+/* Rodapé simples e colorido */
 .footer {
     text-align: center;
-    margin-top: 2.5rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.2);
-    letter-spacing: 0.04em;
+    margin-top: 2.2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #d5c6e6;
+    font-size: 0.95rem;
+    color: #4f3b7a;
+    font-weight: 500;
 }
 
-/* ===== Responsivo ===== */
-@media (max-width: 600px) {
+/* Responsivo */
+@media (max-width: 550px) {
     .container {
         padding: 1.5rem 1.2rem;
     }
     h1 {
         font-size: 2.2rem;
     }
-    p {
-        max-width: 100%;
+    .card {
+        padding: 1.2rem 1.2rem;
     }
-    .term-block .term-header {
-        flex-direction: column;
-        gap: 0.2rem;
+    .card h2 {
+        font-size: 1.4rem;
+        display: block;
+        margin-bottom: 0.2rem;
     }
 }
